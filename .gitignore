@@ -1,0 +1,7 @@
+.vscode
+firmware-bin
+sdkconfig
+sdkconfig.old
+build
+*.DS_Store
+*/.cache

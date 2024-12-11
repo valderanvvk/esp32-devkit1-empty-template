@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  esp32-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: esp32_dev_container
+    devices:
+      - "/dev/ttyESP32:/dev/ttyESP32"
+    privileged: true
+    volumes:
+      - .:/workspace
+    environment:
+      - LC_ALL=C.UTF-8
+      - LANG=C.UTF-8
+    command: "/bin/bash"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

@@ -1,0 +1,8 @@
+# copy to: /etc/udev/rules.d/
+#
+# for update rules:
+# sudo udevadm control --reload
+# sudo udevadm trigger
+
+KERNEL=="ttyUSB[0-9]",MODE="0666"
+KERNEL=="ttyACM[0-9]",MODE="0666"
